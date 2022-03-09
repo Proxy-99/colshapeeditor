@@ -1,6 +1,6 @@
 local Activeable = false
 local isToolInUse = false
-local DefaultSpeed = .50
+local DefaultSpeed = 0.50
 local ScreenX, ScreenY = guiGetScreenSize()
 local NormalX, NormalY = (ScreenX - 826 + 625), (ScreenY - 450)
 local OtherX, OtherY = (ScreenX - 826 + 490), (ScreenY - 450)
