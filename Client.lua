@@ -99,7 +99,8 @@ function ()
 				end
 			else
 				exports["freecam"]:setFreecamDisabled()
-				setCameraTarget(localPlayer)
+				-- a camrea bug 
+				--setCameraTarget(localPlayer)
 				showCursor(false)
 				isToolInUse = false
 				guiSetVisible(ToolBox, false)
