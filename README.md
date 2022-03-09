@@ -1,7 +1,7 @@
 # colshapeeditor
  MTA sa script
  
-resource original resource link https://community.multitheftauto.com/index.php?p=resources&s=details&id=13401
+ original resource link https://community.multitheftauto.com/index.php?p=resources&s=details&id=13401
 by 	Marshmello
 
 this repository aim to keep maintain and development the resource since it is deprecated since 2016 by the author 
