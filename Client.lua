@@ -12,7 +12,11 @@ local CubeW, CubeD, CubeH = 10, 10, 10
 local RecW, RecH = 5, 5
 local SphereRadius = 10
 local TubeRadius, TubeH = 10, 10
-local CollisionTable, PressedKeys, AllowedButtons, Types = {}, {}, {["num_sub"] = true; ["num_8"] = true; ["num_2"] = true; ["num_6"] = true; ["num_4"] = true; ["num_add"] = true; ["lshift"] = true; ["lalt"] = true; ["arrow_l"] = true; ["arrow_u"] = true; ["arrow_r"] = true; ["arrow_d"] = true; ["pgup"] = true; ["pgdn"] = true}, {"Circle", "Cuboid", "Rectangle", "Sphere", "Tube", "Polygon(Soon)"}
+local CollisionTable, PressedKeys, AllowedButtons, Types = {}, {}, 
+{["num_sub"] = true, ["num_8"] = true, ["num_2"] = true, ["num_6"] = true, ["num_4"] = true, 
+["num_add"] = true, ["lshift"] = true, ["lalt"] = true, ["arrow_l"] = true, ["arrow_u"] = true, 
+["arrow_r"] = true, ["arrow_d"] = true, ["pgup"] = true, ["pgdn"] = true}, 
+{"Circle", "Cuboid", "Rectangle", "Sphere", "Tube", "Polygon(Soon)"}
 
 setDevelopmentMode(true)
 function getColShapeType(Element) if isElement(Element) then return getElementData(Element, "ColEditor:Type") else return nil end end
