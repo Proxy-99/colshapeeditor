@@ -578,11 +578,10 @@ function ()
 end
 )
 
---[[
-local CodeStart, CodeEnd = addEventHandler("onResourceStart", resourceRoot, 
-function (), end
-)
-]]--
+--do not change this
+local CodeStart, CodeEnd = [[addEventHandler("onResourceStart", resourceRoot, 
+function ()]], [[end
+)]]
 
 addEventHandler("onClientElementDataChange", root, 
 function (Data)
