@@ -94,7 +94,6 @@ function ()
 				exports["freecam"]:setFreecamEnabled()
 				isToolInUse = true
 				guiSetVisible(ToolBox, true)
-				setElementFrozen(localPlayer, true)
 				for Key, Value in ipairs(getElementsByType("gui-button", resourceRoot)) do
 					guiSetEnabled(Value, isCursorShowing())
 				end
@@ -109,7 +108,6 @@ function ()
 				isToolInUse = false
 				guiSetVisible(ToolBox, false)
 				guiSetVisible(Code_output, false)
-				setElementFrozen(localPlayer, false)
 				guiSetPosition(ToolBox, NormalX, NormalY, false)
 				guiSetVisible(CreatedList, false)
 				guiSetVisible(ColList, false)
@@ -481,7 +479,6 @@ function ()
 		isToolInUse = false
 		guiSetVisible(ToolBox, false)
 		guiSetVisible(Code_output, false)
-		setElementFrozen(localPlayer, false)
 		guiSetPosition(ToolBox, NormalX, NormalY, false)
 		guiSetVisible(CreatedList, false)
 		guiSetVisible(ColList, false)
