@@ -472,7 +472,7 @@ function ()
 		end
 	elseif source == Close then
 		exports["freecam"]:setFreecamDisabled()
-		setCameraTarget(localPlayer)
+		--setCameraTarget(localPlayer)
 		showCursor(false)
 		isToolInUse = false
 		guiSetVisible(ToolBox, false)
