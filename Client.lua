@@ -1,3 +1,13 @@
+addEventHandler( "onClientResourceStart", getRootElement( ),
+    function ()
+      	outputChatBox("#00FF00Mar#FFFF00shme#00FF00l#FF59F0lo#FFFFFF: start the editor using Ctrl + C", 0, 0, 0, true)
+	    outputChatBox("#00FF00Mar#FFFF00shme#00FF00l#FF59F0lo#FFFFFF: and write in console: showcol", 0, 0, 0, true)
+	    outputChatBox("#00FF00Mar#FFFF00shme#00FF00l#FF59F0lo#FFFFFF: Arrows = Change Position", 0, 0, 0, true)
+	    outputChatBox("#00FF00Mar#FFFF00shme#00FF00l#FF59F0lo#FFFFFF: Num_4, Num_6, Num_8, Num_2, Num_+, Num_- : Change Size", 0, 0, 0, true)
+    end
+);
+
+
 local Activeable = false
 local isToolInUse = false
 local DefaultSpeed = 0.50
