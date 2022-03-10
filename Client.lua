@@ -88,7 +88,7 @@ end
 
 counter = 0
 
-bindKey("lctrl", "down", 
+bindKey("lctrl", "both", 
 function (K, state)
 	if state == "down" then
 		Activeable = true
@@ -101,19 +101,22 @@ end
 bindKey("c", "down", 
 function ()
 
+	if Activeable == true then
+
 if counter == 0 then
 
    showCursor(true)
-	if Activeable == true then
 	isToolInUse = true
 	guiSetVisible(ToolBox, true)
 	counter =1
-	end
+	
 	
 	else
 	showCursor(false)
 	guiSetVisible(ToolBox, false)
 	counter =0
+	
+	end
 	
 end
 
