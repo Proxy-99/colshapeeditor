@@ -86,7 +86,9 @@ for Key, Value in ipairs(Types) do
 	guiGridListSetItemText(ColList, Row, 1, Value, false, false)
 end
 
-bindKey("lctrl", "both", 
+counter = 0
+
+bindKey("lctrl", "down", 
 function (K, state)
 	if state == "down" then
 		Activeable = true
@@ -98,42 +100,25 @@ end
 
 bindKey("c", "down", 
 function ()
+
+if counter == 0 then
+
+   showCursor(true)
 	if Activeable == true then
-		if getResourceState(getResourceFromName("freecam")) == "running" then
-			if not exports["freecam"]:isFreecamEnabled() then
-				exports["freecam"]:setFreecamEnabled()
-				isToolInUse = true
-				guiSetVisible(ToolBox, true)
-				for Key, Value in ipairs(getElementsByType("gui-button", resourceRoot)) do
-					guiSetEnabled(Value, isCursorShowing())
-				end
-				for Key, Value in ipairs(getElementsByType("gui-gridlist", resourceRoot)) do
-					guiSetEnabled(Value, isCursorShowing())
-				end
-			else
-				exports["freecam"]:setFreecamDisabled()
-				-- a camrea bug 
-				--setCameraTarget(localPlayer)
-				showCursor(false)
-				isToolInUse = false
-				guiSetVisible(ToolBox, false)
-				guiSetVisible(Code_output, false)
-				guiSetPosition(ToolBox, NormalX, NormalY, false)
-				guiSetVisible(CreatedList, false)
-				guiSetVisible(ColList, false)
-				guiSetText(Delete, "Delete >")
-				guiSetText(Create, "Create >")
-				guiSetText(Select, "Select >")
-				for Key, Value in ipairs(getElementsByType("gui-button", resourceRoot)) do
-					guiSetEnabled(Value, isCursorShowing())
-				end
-				for Key, Value in ipairs(getElementsByType("gui-gridlist", resourceRoot)) do
-					guiSetEnabled(Value, isCursorShowing())
-				end
-			end
-		end
+	isToolInUse = true
+	guiSetVisible(ToolBox, true)
+	counter =1
 	end
+	
+	else
+	showCursor(false)
+	guiSetVisible(ToolBox, false)
+	counter =0
+	
 end
+
+end
+
 )
 
 addEventHandler("onClientKey", root, 
@@ -483,6 +468,7 @@ function ()
 			updateCode()
 		end
 	elseif source == Close then
+		counter =0
 		exports["freecam"]:setFreecamDisabled()
 		--setCameraTarget(localPlayer)
 		showCursor(false)
@@ -574,6 +560,7 @@ function ()
 end
 )
 
+--[[
 bindKey("f", "down", 
 function ()
 	if isToolInUse then
@@ -587,7 +574,7 @@ function ()
 		end
 	end
 end
-)
+)--]]
 
 --do not change this
 local CodeStart, CodeEnd = [[addEventHandler("onResourceStart", resourceRoot, 
