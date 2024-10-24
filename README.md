@@ -1,5 +1,5 @@
 # colshapeeditor
- MTA sa script
+ MTA sa script to easily edit col shapes
  
  original resource link https://community.multitheftauto.com/index.php?p=resources&s=details&id=13401
 by 	Marshmello
